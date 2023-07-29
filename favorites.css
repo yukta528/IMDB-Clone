@@ -1,0 +1,120 @@
+/* Set the background image and positioning for the body */
+body {
+  background-image: url(./movieBG.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative; 
+}
+
+/* Create an overlay before the body content with semi-transparent background */
+body::before {
+  content: "";
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(94, 93, 93, 0.7); 
+}
+
+/* Styling for the main container */
+.container {
+  margin-bottom: 5%;
+}
+
+/* Styling for heading */
+h1 {
+  position: relative; 
+  left: 1.5%; 
+  color: white; 
+  padding-top: 20px; 
+  padding-bottom: 20px;
+}
+
+/* Styling for movie cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+/* Scale and add box shadow on card hover */
+.card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Set image size for the movie posters */
+.poster-size {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Set height for the card body */
+.card-body {
+  height: 20vh;
+}
+
+/* Additional card styling */
+.card {
+  width: 40vh;
+  margin: auto !important;
+}
+
+/* Styling for the favorites icon */
+.favorites-icon {
+  position: absolute;
+  padding: 12px;
+  padding-top: 6px;
+  z-index: 1;
+}
+
+/* Styling for the heart icon */
+.favorites-icon i {
+  color: white;
+  font-size: 7vh;
+  text-shadow: 0px 0px 10px rgb(23, 15, 184);
+}
+
+/* Scale and add text shadow on heart icon hover */
+.favorites-icon i:hover {
+  color: rgb(23, 15, 184);
+  text-shadow: 0 0 5px white;
+}
+
+/* Create a grid layout for movie cards */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 20px; 
+}
+
+/* Center the content within the grid items */
+.grid-item {
+  text-align: center;
+}
+
+/* Styling for the home icon */
+#home i {
+  font-size: 2.5rem;
+  color: rgb(23, 15, 184);
+  position: fixed;
+}
+
+/* Scale and add text shadow on home icon hover */
+#home i:hover {
+  transform: scale(1.15); 
+  text-shadow: 0 0 5px white;
+}
+
+/* Styling for the home icon position */
+#home {
+  top: 5%;
+  position: fixed;
+  left: 79%;
+}

@@ -1,0 +1,226 @@
+/* Set the margin and padding of the body to 0 to remove any default spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  background-image: url("./movieBG.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Styling for the main container that holds the header elements */
+#container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(32, 30, 30);
+  width: auto;
+  height: 13vh;
+  position: relative;
+}
+
+/* Styling for the logo container */
+#logoContainer {
+  position: absolute;
+  left: 13%;
+}
+
+/* Styling for the logo image inside the logo container */
+#logoContainer img {
+  width: 6vw;
+  height: 12vh;
+}
+
+/* Styling for the search container */
+#searchContainer {
+  position: absolute;
+  left: 24%;
+  width: 50vw;
+}
+
+/* Styling for the heart container */
+#heartContainer {
+  position: absolute;
+  right: 16%;
+  font-size: 7vh;
+
+}
+
+
+/* Styling for the heart icon on hover */
+#heartContainer i:hover {
+  text-shadow: 0 0 5px white;
+}
+
+#heartContainer a {
+  color: red;
+}
+
+/* Styling for the background section */
+#bg {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5%;
+
+}
+
+/* Styling for the background image */
+#bg img {
+  /* opacity: 85%; */
+  position: relative;
+  width: 100%;
+}
+
+/* Styling for the heading in the background section */
+#bg h1 {
+  position: absolute;
+  font-size: 3rem;
+  color: white;
+  top: 53%;
+  z-index: 10;
+  left: 21%;
+}
+
+
+
+/* Styling for the individual movie cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+
+}
+
+/* Styling for the size of the movie poster inside the card */
+.poster-size {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Styling for the text when no results are found */
+#no-result-text {
+  color: white;
+  font-size: 2.3rem;
+}
+
+/* Styling for the row that holds the movie cards */
+#card-list {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  top: 9%;
+  left: 9%;
+  bottom: -10%;
+}
+
+/* Styling for the movie card body (content) */
+.card-body {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+/* Styling for the individual movie cards */
+.card {
+  width: 40vh;
+  margin: auto !important;
+
+}
+
+.card:hover {
+  color: black;
+  transform: scale(1.05);
+  /* Enlarge the card on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Add a slightly stronger box shadow */
+}
+
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.favorites-icon {
+  position: absolute;
+
+  padding: 12px;
+  padding-top: 6px;
+
+  z-index: 1;
+}
+
+.favorites-icon i {
+  color: white;
+
+  font-size: 7vh;
+  text-shadow: 0px 0px 10px red;
+}
+
+.favorites-icon i:hover {
+  color: red;
+  text-shadow: 0 0 5px white;
+}
+
+.fav-movie {
+  color: red !important;
+  text-shadow: 0 0 5px white !important;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  max-width: 1000px;
+
+  grid-gap: 20px;
+}
+
+.grid-item {
+
+
+  text-align: center;
+
+}
+
+.container {
+  margin-bottom: 5%;
+}
